@@ -35,11 +35,12 @@ public class TimeController : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKey(KeyCode.Q)) {
-			adjustTime(-0.005f);
-		} else if (Input.GetKey(KeyCode.E)) {
-			adjustTime(0.005f);
-		}
+		// Zakomentowałem z racji powstania BuildControllera
+		// if (Input.GetKey(KeyCode.Q)) {
+		// 	adjustTime(-0.005f);
+		// } else if (Input.GetKey(KeyCode.E)) {
+		// 	adjustTime(0.005f);
+		// }
 		updateSun();
 		updateDisplay();
 		time += Time.deltaTime / (minutesInAFullDay * 60);
