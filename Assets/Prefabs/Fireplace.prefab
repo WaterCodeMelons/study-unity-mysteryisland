@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1240571fb20e3144087ea30a74b35ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  id: 2
   tooltip: Rozpal ognisko
 --- !u!114 &114312792223841656
 MonoBehaviour:
