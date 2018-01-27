@@ -4,50 +4,28 @@ using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class UIController : MonoBehaviour {
+    
 
-    public GameObject Inv;
-    public bool show;
-
-	// Use this for initialization
-	void Start () {
-        
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            show = !show;
-            if (show)
-            {
-                ShowPanel(Inv);
-            }
-            else
-            {
-                HidePanel(Inv);
-            }
-
-        }
-
-
-	}
-
-    public void ShowPanel(GameObject smth)
+    public void ShowPanel(string nazwa)
     {
-        if(smth.activeSelf==false)
+        GameObject panel;
+        panel = GameObject.Find(nazwa);
+        if(panel.activeInHierarchy==false)
         {
-            smth.SetActive(true);
+            panel.SetActive(true);
             GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
     }
 
-    public void HidePanel(GameObject smth)
+    public void HidePanel(string nazwa)
     {
-        if (smth.activeSelf)
+        GameObject panel;
+        panel = GameObject.Find(nazwa);
+        if (panel.activeInHierarchy)
         {
-            smth.SetActive(false);
+            panel.SetActive(false);
             GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = true;
             Cursor.visible = false;
         }
