@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 
 
-public class Inventory : MonoBehaviour {
+public class Inventory : MonoBehaviour
+{
 
     GameObject InventoryPanel;
     GameObject Slot1;
@@ -18,7 +19,17 @@ public class Inventory : MonoBehaviour {
     GameObject Slot8;
     GameObject Slot9;
     GameObject Slot10;
-    
+    GameObject Slot11;
+    GameObject Slot12;
+    GameObject Slot13;
+    GameObject Slot14;
+    GameObject Slot15;
+    GameObject Slot16;
+    GameObject Slot17;
+    GameObject Slot18;
+    GameObject Slot19;
+    GameObject Slot20;
+
 
     // Use this for initialization
     void Start()
@@ -34,13 +45,25 @@ public class Inventory : MonoBehaviour {
         Slot8 = GameObject.Find("Slot8");
         Slot9 = GameObject.Find("Slot9");
         Slot10 = GameObject.Find("Slot10");
+        Slot11 = GameObject.Find("Slot11");
+        Slot12 = GameObject.Find("Slot12");
+        Slot13 = GameObject.Find("Slot13");
+        Slot14 = GameObject.Find("Slot14");
+        Slot15 = GameObject.Find("Slot15");
+        Slot16 = GameObject.Find("Slot16");
+        Slot17 = GameObject.Find("Slot17");
+        Slot18 = GameObject.Find("Slot18");
+        Slot19 = GameObject.Find("Slot19");
+        Slot20 = GameObject.Find("Slot20");
+        DodajPrzedmiot(1, 10);
 
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        if (InventoryPanel.activeSelf==true)
+        if (InventoryPanel.activeSelf == true)
         {
             UstawIkone(Slot1);
             UstawIkone(Slot2);
@@ -52,8 +75,18 @@ public class Inventory : MonoBehaviour {
             UstawIkone(Slot8);
             UstawIkone(Slot9);
             UstawIkone(Slot10);
+            UstawIkone(Slot11);
+            UstawIkone(Slot12);
+            UstawIkone(Slot13);
+            UstawIkone(Slot14);
+            UstawIkone(Slot15);
+            UstawIkone(Slot16);
+            UstawIkone(Slot17);
+            UstawIkone(Slot18);
+            UstawIkone(Slot19);
+            UstawIkone(Slot20);
         }
-        DodajPrzedmiot(1, 1);
+
 
     }
 
@@ -74,7 +107,7 @@ public class Inventory : MonoBehaviour {
         int NowaWartosc;
         PoprzedniaWartosc = int.Parse(ilosc.text);
         NowaWartosc = PoprzedniaWartosc + amount;
-        if (NowaWartosc>20)
+        if (NowaWartosc > 20)
         {
             return false;
         }
@@ -84,7 +117,7 @@ public class Inventory : MonoBehaviour {
             ilosc.text = NowaWartosc.ToString();
             return true;
         }
-                
+
     }
     /* 
     <summary>
@@ -100,9 +133,9 @@ public class Inventory : MonoBehaviour {
         Image obraz = slot.GetComponentInChildren<Image>();
         int amount = int.Parse(ilosc.text);
         Color c = obraz.color;
-        if (amount==0)
+        if (amount == 0)
         {
-            c.a = 0.35f;
+            c.a = 0.4f;
         }
         else
         {
@@ -120,7 +153,25 @@ public class Inventory : MonoBehaviour {
     (posiadana ilosc jest >= od ilosci do usuniecia).
     </summary>
     */
-    public bool UsunPrzedmiot(int id, int amount)  
+    public bool UsunPrzedmiot(int id, int amount)
+    {
+        Text ilosc = PrzypiszSlot(id);
+        int PoprzedniaWartosc;
+        int NowaWartosc;
+        PoprzedniaWartosc = int.Parse(ilosc.text);
+        if (PoprzedniaWartosc >= amount)
+        {
+            NowaWartosc = PoprzedniaWartosc - amount;
+            ilosc.text = NowaWartosc.ToString();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool UsunPrzedmiot(int id, int amount, bool craft)
     {
         Text ilosc = PrzypiszSlot(id);
         int PoprzedniaWartosc;
@@ -148,8 +199,8 @@ public class Inventory : MonoBehaviour {
     */
     public bool CzyPosiadaIlosc(int id, int amount)
     {
-        bool wynik=false;
-        Text ilosc= PrzypiszSlot(id);
+        bool wynik = false;
+        Text ilosc = PrzypiszSlot(id);
 
         if (amount <= int.Parse(ilosc.text))
         {
@@ -161,7 +212,7 @@ public class Inventory : MonoBehaviour {
         }
 
         return wynik;
- 
+
     }
 
     /* 
@@ -177,7 +228,7 @@ public class Inventory : MonoBehaviour {
         Text ilosc = Slot1.GetComponentInChildren<Text>();
         switch (id)
         {
-          
+
             case 1:
                 ilosc = Slot1.GetComponentInChildren<Text>();
                 break;
@@ -218,8 +269,65 @@ public class Inventory : MonoBehaviour {
             case 10:
                 ilosc = Slot10.GetComponentInChildren<Text>();
                 break;
-                
+
+            case 11:
+                ilosc = Slot11.GetComponentInChildren<Text>();
+                break;
+
+            case 12:
+                ilosc = Slot12.GetComponentInChildren<Text>();
+                break;
+
+            case 13:
+                ilosc = Slot13.GetComponentInChildren<Text>();
+                break;
+
+            case 14:
+                ilosc = Slot14.GetComponentInChildren<Text>();
+                break;
+
+            case 15:
+                ilosc = Slot15.GetComponentInChildren<Text>();
+                break;
+
+            case 16:
+                ilosc = Slot16.GetComponentInChildren<Text>();
+                break;
+
+            case 17:
+                ilosc = Slot17.GetComponentInChildren<Text>();
+                break;
+
+            case 18:
+                ilosc = Slot18.GetComponentInChildren<Text>();
+                break;
+
+            case 19:
+                ilosc = Slot19.GetComponentInChildren<Text>();
+
+                break;
+
+            case 20:
+                ilosc = Slot20.GetComponentInChildren<Text>();
+                break;
+
         }
         return ilosc;
+    }
+
+    public int iloscPrzedmiotow(int id)
+    {
+
+        Text text = PrzypiszSlot(id);
+        int wynik = int.Parse(text.text);
+        return wynik;
+    }
+
+    public int iloscPrzedmiotow(int id, bool craft)
+    {
+        id++;
+        Text text = PrzypiszSlot(id);
+        int wynik = int.Parse(text.text);
+        return wynik;
     }
 }
