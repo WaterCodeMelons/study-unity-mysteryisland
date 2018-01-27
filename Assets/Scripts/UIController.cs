@@ -13,9 +13,12 @@ public class UIController : MonoBehaviour {
         if(panel.activeInHierarchy==false)
         {
             panel.SetActive(true);
-            GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = false;
-            Cursor.visible = true;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.lockCursor = false;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 0;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 0;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
 
@@ -26,7 +29,11 @@ public class UIController : MonoBehaviour {
         if (panel.activeInHierarchy)
         {
             panel.SetActive(false);
-            GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = true;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.lockCursor = true;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.XSensitivity = 2;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_MouseLook.YSensitivity = 2;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
     }

@@ -3593,8 +3593,8 @@ Transform:
   - {fileID: 332470730}
   - {fileID: 1819873328}
   - {fileID: 112774941}
-  - {fileID: 974489922}
   - {fileID: 139387709}
+  - {fileID: 974489922}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6876,7 +6876,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4343870558152042, guid: 595865976d279664a9789469c6823950, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 595865976d279664a9789469c6823950, type: 2}
@@ -11029,7 +11029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4343870558152042, guid: 595865976d279664a9789469c6823950, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1606510537315246, guid: 595865976d279664a9789469c6823950, type: 2}
       propertyPath: m_Name
@@ -19371,7 +19371,7 @@ SkinnedMeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1505745846}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -25663,12 +25663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013d0c1e89874ca43bd906bb83a010ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fpsController: {fileID: 1937143755}
   playerCamera: {fileID: 1857710794}
+  playerAnimator: {fileID: 1529640915}
   raycastTooltip: {fileID: 2104973119}
   interactionRange: 1.5
-  playerAnimator: {fileID: 1529640915}
   combatOn: 1
   fistDamage: 10
+  attackCooldownInSec: 1
 --- !u!114 &1937143755
 MonoBehaviour:
   m_ObjectHideFlags: 0

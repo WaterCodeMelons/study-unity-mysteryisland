@@ -32,37 +32,41 @@ public class BuildController : MonoBehaviour {
 		// Ray widoczny w edytorze
 		Debug.DrawRay(rayStart, Vector3.down * 100);
 
-		// Kolizja z terenem
-        if (Physics.Raycast(rayStart, Vector3.down, out hit, 100))
-        {
-			if (hit.transform.name == "Terrain") {
-				building.transform.position = hit.point; // Punkt kolizji raya z terrain colliderem
-				/*
-				<summary>
-				Najważniejszy element klasy budującej. Quaternion.FromToRotation() metoda pozwalająca na ustawienie wektora kierunku obiektu w inny wektor kierunku,
-				np ustawienie wektora wychodzącego lokalnie w górę od obiektu [building.transform.up] do wektora normalnego płaszczyzny kolzji terenu [hit.normal].
-				Pomnożenie tej rotacji wyliczonej z ustawienia jednego wektora kierunku w stosunku do drugiego pozwala na "ustawienie" predefiniowanej rotacji dla obiektu.
-				Jednym zdaniem, bez tej dodatkowej rotacji obiekt będzie rotował od Quaternion.identity do hit.normal, to dodatkowe mnożenie pozwala na ustawienie wcześniejszego
-				obrotu za pomocą KeyCode.Q, KeyCode.E.
-				</summary>
-				*/
-				building.transform.rotation = Quaternion.FromToRotation (building.transform.up, hit.normal) * building.transform.rotation;
+		if (isBuilding) {
+
+			// Kolizja z terenem
+			if (Physics.Raycast(rayStart, Vector3.down, out hit, 100))
+			{
+				if (hit.transform.name == "Terrain") {
+					building.transform.position = hit.point; // Punkt kolizji raya z terrain colliderem
+					/*
+					<summary>
+					Najważniejszy element klasy budującej. Quaternion.FromToRotation() metoda pozwalająca na ustawienie wektora kierunku obiektu w inny wektor kierunku,
+					np ustawienie wektora wychodzącego lokalnie w górę od obiektu [building.transform.up] do wektora normalnego płaszczyzny kolzji terenu [hit.normal].
+					Pomnożenie tej rotacji wyliczonej z ustawienia jednego wektora kierunku w stosunku do drugiego pozwala na "ustawienie" predefiniowanej rotacji dla obiektu.
+					Jednym zdaniem, bez tej dodatkowej rotacji obiekt będzie rotował od Quaternion.identity do hit.normal, to dodatkowe mnożenie pozwala na ustawienie wcześniejszego
+					obrotu za pomocą KeyCode.Q, KeyCode.E.
+					</summary>
+					*/
+					building.transform.rotation = Quaternion.FromToRotation (building.transform.up, hit.normal) * building.transform.rotation;
+				}
 			}
-        }
 
+			// Obracanie obiektu wokół wektora skierowanego ku górze pozycji lokalnej obiektu
+			if (Input.GetKey(KeyCode.Q)) {
+					building.transform.Rotate(-(Vector3.up * Time.deltaTime * 100));
+			}
 
-		// Obracanie obiektu wokół wektora skierowanego ku górze pozycji lokalnej obiektu
-		if (Input.GetKey(KeyCode.Q)) {
-				building.transform.Rotate(-(Vector3.up * Time.deltaTime * 100));
-		}
+			if (Input.GetKey(KeyCode.E)) {
+					building.transform.Rotate(Vector3.up * Time.deltaTime * 100);
+			}
 
-		if (Input.GetKey(KeyCode.E)) {
-				building.transform.Rotate(Vector3.up * Time.deltaTime * 100);
-		}
+			// "puszczenie" obiektu, pozostawienie go w miejscu zderzenia
+			if (Input.GetButtonDown("Fire1")) {
+					building = null;
+					isBuilding = false;
+			}
 
-		// "puszczenie" obiektu, pozostawienie go w miejscu zderzenia
-		if (Input.GetButtonDown("Fire1")) {
-				building = null;
 		}
 
     }
@@ -71,5 +75,6 @@ public class BuildController : MonoBehaviour {
 	// I będzie można go zatwierdzić za pomocą LMB
 	void build (int id) {
 		building = Instantiate(buildingsDatabase[0], hit.point, Quaternion.identity);
+		isBuilding = true;
 	}
 }

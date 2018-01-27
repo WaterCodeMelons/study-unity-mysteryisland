@@ -15,7 +15,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerController : MonoBehaviour {
 
 	[Header("Dependencies")]
-	FirstPersonController fpsController;
+	public FirstPersonController fpsController;
 	public Camera playerCamera;
 	public Animator playerAnimator;
 	public Text raycastTooltip;
@@ -113,6 +113,8 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Damage (RaycastHit hit) {
 		yield return new WaitForSeconds(0.5f);
 		hit.transform.SendMessage("damage", fistDamage);
-		hit.transform.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 15, ForceMode.Impulse);
+		
+		if (hit.transform.GetComponent<Rigidbody>())
+			hit.transform.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 15, ForceMode.Impulse);
 	}
 }

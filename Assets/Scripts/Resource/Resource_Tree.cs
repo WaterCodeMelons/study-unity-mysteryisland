@@ -35,8 +35,6 @@ public class Resource_Tree : MonoBehaviour {
 		
 		for (int i = 0; i < dropCount; i++) {
 			GameObject tmp = Instantiate(resource, new Vector3(gameObject.transform.position.x + i - 1, gameObject.transform.position.y + 3, gameObject.transform.position.z), Quaternion.identity);
-			tmp.AddComponent<Rigidbody>();
-			tmp.AddComponent<BoxCollider>();
 		}
 		Destroy(gameObject);
     }
