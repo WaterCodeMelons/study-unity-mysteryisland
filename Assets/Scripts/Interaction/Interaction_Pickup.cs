@@ -10,6 +10,8 @@ using UnityEngine.UI;
 	*/
 public class Interaction_Pickup : MonoBehaviour {
 
+	// id przedmiotu do dodania do inventory
+	public int id;
 	// Ilość podnoszonego przedmiotu do inventory
 	public int count;
 
