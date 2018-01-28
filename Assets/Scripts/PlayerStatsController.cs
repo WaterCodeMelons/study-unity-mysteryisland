@@ -33,7 +33,7 @@ public class PlayerStatsController : MonoBehaviour {
 	private float stamina;
 	private float thirst;
 	private float hunger;
-	private float health;
+	public float health;
 
 	private FirstPersonController fpsController;
 
