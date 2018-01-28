@@ -11,7 +11,7 @@ using UnityEngine;
 public class Resource_Tree : MonoBehaviour {
 
 	// HP drzewa, które PlayerController musi zbić aby zniszczyć drzewo
-	public float health = 50;
+	public float health = 100;
 	// Przedmiotm który ma wypadać z drzewa
 	public GameObject resource;
 	// Ilość wypadanego przedmiotu
@@ -31,7 +31,7 @@ public class Resource_Tree : MonoBehaviour {
 	// Wątek odpowiadający za spawn przedmiotu i usunięcie obiektu asynchronicznie 10s po zniszczeniu drzewa
 	IEnumerator Spawn (int dropCount)
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 		
 		for (int i = 0; i < dropCount; i++) {
 			GameObject tmp = Instantiate(resource, new Vector3(gameObject.transform.position.x + i - 1, gameObject.transform.position.y + 3, gameObject.transform.position.z), Quaternion.identity);

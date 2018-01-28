@@ -8,7 +8,6 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class Inventory : MonoBehaviour
 {
 
-    GameObject InventoryPanel;
     GameObject Slot1;
     GameObject Slot2;
     GameObject Slot3;
@@ -32,9 +31,8 @@ public class Inventory : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
-        InventoryPanel = GameObject.Find("Inventory");
         Slot1 = GameObject.Find("Slot1");
         Slot2 = GameObject.Find("Slot2");
         Slot3 = GameObject.Find("Slot3");
@@ -56,14 +54,14 @@ public class Inventory : MonoBehaviour
         Slot19 = GameObject.Find("Slot19");
         Slot20 = GameObject.Find("Slot20");
         DodajPrzedmiot(1, 10);
-
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (InventoryPanel.activeSelf == true)
+        if (gameObject.activeSelf == true)
         {
             UstawIkone(Slot1);
             UstawIkone(Slot2);

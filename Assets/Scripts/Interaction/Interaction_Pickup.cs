@@ -10,6 +10,8 @@ using UnityEngine.UI;
 	*/
 public class Interaction_Pickup : MonoBehaviour {
 
+	private Inventory inv;
+
 	// id przedmiotu do dodania do inventory
 	public int id;
 	// Ilość podnoszonego przedmiotu do inventory
@@ -17,7 +19,12 @@ public class Interaction_Pickup : MonoBehaviour {
 
 	// Interakcja z PlayerController TODO
 	public void interaction () {
-		Destroy(gameObject);
+		if (inv.DodajPrzedmiot(id, count)) {
+			Destroy(gameObject);
+		}
 	}
 
+	void Start () {
+		inv = GameObject.Find("Canvas/ResolutionControl/Inventory").GetComponent<Inventory>();
+	}
 }

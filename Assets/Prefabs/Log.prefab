@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1240571fb20e3144087ea30a74b35ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   tooltip: "Podnie\u015B k\u0142od\u0119"
 --- !u!114 &114821320971307500
 MonoBehaviour:
@@ -139,4 +139,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f4f9baebf2e404c90ce6634dbbba31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 1
   count: 1

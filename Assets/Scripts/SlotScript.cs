@@ -13,7 +13,7 @@ Dodawanie hp/ wyrzucanie przedmiotu/ów/
 
 public class SlotScript : MonoBehaviour, IPointerClickHandler
 {
-    public Inventory plecak;
+    private Inventory plecak;
     public int PrzedmiotID;
     public GameObject ModelPrzedmiotu;
     public bool Jadalne;
@@ -28,14 +28,14 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
     {    
         if (eventData.button == PointerEventData.InputButton.Right && Jadalne)
         {
-            if(plecak.UsunPrzedmiot(PrzedmiotID, 10))
+            if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
             {
                 // dodajHP;
             }
         }
         if(eventData.button == PointerEventData.InputButton.Left)
         {
-            if(plecak.UsunPrzedmiot(PrzedmiotID, 10))
+            if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
             {
                 Instantiate(ModelPrzedmiotu, Player.transform.position + (Player.transform.forward * 2), Player.transform.rotation);
             }
@@ -45,7 +45,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
 
     // Use this for initialization
     void Start () {
-
+        plecak = GameObject.Find("Inventory").GetComponent<Inventory>();
 	}
 	
 	// Update is called once per frame
