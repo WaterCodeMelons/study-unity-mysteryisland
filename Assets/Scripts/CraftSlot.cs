@@ -7,14 +7,20 @@ using UnityEngine.EventSystems;
 public class CraftSlot : MonoBehaviour, IPointerClickHandler
 {
 
+    public int itemIdToCraft;
+
+    [Space]
+    [Space]
+
     public int slotid;
     public Crafting craft;
-    public int[] Wymagania= new int[10];
+    public int[] Wymagania = new int[10];
     public void OnPointerClick(PointerEventData eventData)
     {
         if(eventData.button == PointerEventData.InputButton.Left)
         {
             craft.IdToCraft = slotid;
+            craft.itemIdToCraft = itemIdToCraft;
             craft.WymaganiaDoCraftu = Wymagania;
         }
     }

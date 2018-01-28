@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonController : MonoBehaviour {
 
     public Crafting CraftingPanel;
+    public Inventory inv;
     public GameObject CPanel;
     //public Inventory invent;
 	// Use this for initialization
@@ -41,7 +42,8 @@ public class ButtonController : MonoBehaviour {
         if (CraftingPanel.CzySpelniaWymagania(CraftingPanel.IdToCraft))
         {
            CraftingPanel.UsunZinventory(CraftingPanel.IdToCraft);
-           CraftingPanel.DodajPrzedmiot(CraftingPanel.IdToCraft, 1);
+           //CraftingPanel.DodajPrzedmiot(CraftingPanel.IdToCraft, 1);
+           inv.DodajPrzedmiot(CraftingPanel.itemIdToCraft, 1);
 
         }
     }

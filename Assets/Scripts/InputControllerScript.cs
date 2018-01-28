@@ -31,6 +31,7 @@ public class InputControllerScript : MonoBehaviour {
 			}
 			else {
 				kontroler.HidePanel("Canvas/ResolutionControl/Inventory");
+				kontroler.HidePanel("Canvas/ResolutionControl/Craft");
 			}
 		}
 	}

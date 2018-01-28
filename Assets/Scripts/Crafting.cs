@@ -9,6 +9,7 @@ public class Crafting : MonoBehaviour {
     public GameObject CPanel;
     public Inventory inv;
     public int IdToCraft;
+    public int itemIdToCraft;
     public int[] WymaganiaDoCraftu = new int[10]; 
     GameObject CraftSlot1;
     GameObject CraftSlot2;
@@ -142,7 +143,8 @@ public class Crafting : MonoBehaviour {
         obraz8.color = c;
         obraz9.color = c;
         obraz10.color = c;
-        c.r = 0.1f;
+        c = Color.black;
+        c.a = 1f;
         obraz.color = c;
 
     }
@@ -196,7 +198,6 @@ public class Crafting : MonoBehaviour {
             c.a = 1f;
         }
         obraz.color = c;
-
     }
 
     public bool DodajPrzedmiot(int id, int amount)
