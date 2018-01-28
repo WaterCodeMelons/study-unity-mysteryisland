@@ -15,10 +15,10 @@ public class Interaction_Fire : MonoBehaviour {
 	// Klasa potrzebuje dostępu do włączania i wyłączania ognia
 	public GameObject particle;
 	// Czas palenia
-	private float time;
+	public float time;
 
 	void Start() {
-		time = 0;
+		
 	}
 
 	void Update () {

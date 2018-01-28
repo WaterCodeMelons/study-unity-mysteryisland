@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: fe7b5537e40cc574b914dea940b0d5f7
+  - enabled: 1
     path: Assets/Scenes/ScenaWyspy.unity
     guid: 0a039efec3792e44dbf5286ac90778a4

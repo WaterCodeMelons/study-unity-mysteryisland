@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
     
@@ -37,4 +38,19 @@ public class UIController : MonoBehaviour {
             Cursor.visible = false;
         }
     }
+
+	public void LoadScene(string nazwaSceny) {
+		SceneManager.LoadScene(nazwaSceny);
+	}
+
+
+    public void Quit()
+    {
+    #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+    #else
+            Application.Quit();
+    #endif
+    }
+
 }
