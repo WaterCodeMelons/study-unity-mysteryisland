@@ -44,27 +44,6 @@ public class Crafting : MonoBehaviour {
         {
             PokazWybranySlot(IdToCraft);
         }
-        if (CPanel.activeSelf == true)
-        { 
-
-            UstawIkone(CraftSlot1);
-            UstawIkone(CraftSlot2);
-            UstawIkone(CraftSlot3);
-            UstawIkone(CraftSlot4);
-            UstawIkone(CraftSlot5);
-            UstawIkone(CraftSlot6);
-            UstawIkone(CraftSlot7);
-            UstawIkone(CraftSlot8);
-            UstawIkone(CraftSlot9);
-            UstawIkone(CraftSlot10);
-        }
-
-        else
-        {
-            print("brak");
-        }
-        
-
 	}
 
     public Image WybierzZdjecieSlota(int id)
@@ -180,24 +159,6 @@ public class Crafting : MonoBehaviour {
         {
             inv.UsunPrzedmiot(i,WymaganiaDoCraftu[i],true);
         }
-    }
-
-    public void UstawIkone(GameObject slot)
-    {
-        Text ilosc = slot.GetComponentInChildren<Text>();
-        Image obraz = slot.GetComponentInChildren<Image>();
-        int amount = int.Parse(ilosc.text);
-        Color c = Color.white;
-        if (amount == 0)
-        {
-            c.a = 0.4f;
-        }
-        else
-        {
-            c=Color.black;
-            c.a = 1f;
-        }
-        obraz.color = c;
     }
 
     public bool DodajPrzedmiot(int id, int amount)
