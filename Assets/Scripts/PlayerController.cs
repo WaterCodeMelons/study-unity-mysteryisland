@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour {
 	public Camera playerCamera;
 	public Animator playerAnimator;
 	public Text raycastTooltip;
+	public AudioSource attackSound;
+	public AudioClip punch;
+	public AudioClip chop;
+	public GameObject Axe;
 
 	[Space]
 
@@ -31,13 +35,18 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Combat data")]
 	public bool combatOn = true;
+	public bool hasAxe = false;
 	public float fistDamage = 10;
+	public float axeDamage = 100;
 	public float attackCooldownInSec = 1; // predefiniowany cooldown
 	private float cooldown = 0; // aktualny cooldown, który zmienia się po wykonaniu ataku
 
 	void Update () {
 		castRay();
 		animate();
+
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+			hasAxe = !hasAxe;
     }
 
 
@@ -79,6 +88,8 @@ public class PlayerController : MonoBehaviour {
 	// Mała metoda pozwalająca na lepszą organizację kodu między animacjami biegania, interakcji i uderzenia
 	void animate () {
 		playerAnimator.SetBool("isRunning", !fpsController.m_IsWalking);
+		playerAnimator.SetBool("hasWeapon", hasAxe);
+		Axe.SetActive(hasAxe);
 	}
 
 	/*
@@ -91,8 +102,13 @@ public class PlayerController : MonoBehaviour {
 	void struck (RaycastHit hit) {
 		if (combatOn) {
 			if (Input.GetKeyDown(KeyCode.Mouse0) && cooldown == 0) {
-				playerAnimator.SetBool("punch" + Random.Range(1, 3), true);
-				StartCoroutine(Damage(hit));
+				if (hasAxe) {
+					playerAnimator.SetBool("swing" + Random.Range(1, 3), true);
+					StartCoroutine(Damage(hit, axeDamage, chop));
+				} else {
+					playerAnimator.SetBool("punch" + Random.Range(1, 3), true);
+					StartCoroutine(Damage(hit, fistDamage, punch));
+				}
 				cooldown = 1;
 				StartCoroutine(stopAnim(cooldown));
 			} else {
@@ -107,12 +123,16 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(cooldown);
 		playerAnimator.SetBool("punch1", false);
 		playerAnimator.SetBool("punch2", false);
+		playerAnimator.SetBool("swing1", false);
+		playerAnimator.SetBool("swing2", false);
 	}
 
 	// Wątek aplikujący obrażenia i siłę na rigidbody w odpowiednim czasie trwania animacji
-	IEnumerator Damage (RaycastHit hit) {
+	IEnumerator Damage (RaycastHit hit, float damage, AudioClip sound) {
 		yield return new WaitForSeconds(0.5f);
-		hit.transform.SendMessage("damage", fistDamage);
+		attackSound.clip = sound;
+		attackSound.Play();
+		hit.transform.SendMessage("damage", damage);
 		
 		if (hit.transform.GetComponent<Rigidbody>())
 			hit.transform.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 15, ForceMode.Impulse);
