@@ -142,7 +142,7 @@ public class Crafting : MonoBehaviour {
         obraz8.color = c;
         obraz9.color = c;
         obraz10.color = c;
-        c.b = 0.7f;
+        c.r = 0.1f;
         obraz.color = c;
 
     }
@@ -185,13 +185,14 @@ public class Crafting : MonoBehaviour {
         Text ilosc = slot.GetComponentInChildren<Text>();
         Image obraz = slot.GetComponentInChildren<Image>();
         int amount = int.Parse(ilosc.text);
-        Color c = obraz.color;
+        Color c = Color.white;
         if (amount == 0)
         {
             c.a = 0.4f;
         }
         else
         {
+            c=Color.black;
             c.a = 1f;
         }
         obraz.color = c;
