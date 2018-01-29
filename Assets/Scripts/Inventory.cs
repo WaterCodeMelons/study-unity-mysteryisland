@@ -191,13 +191,11 @@ public class Inventory : MonoBehaviour
         {
             NowaWartosc = PoprzedniaWartosc - amount;
             ilosc.text = NowaWartosc.ToString();
-            print("tru");
             return true;
         }
         else
         {
             return false;
-            print("fals");
         }
     }
     /* 
