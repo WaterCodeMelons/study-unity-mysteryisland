@@ -94,6 +94,9 @@ public class Inventory : MonoBehaviour
             UstawIkone(Slot23);
             UstawIkone(Slot24);
         }
+        DodajPrzedmiot(16, 1);
+        DodajPrzedmiot(17, 1);
+        DodajPrzedmiot(2, 1);
     }
 
     /* 

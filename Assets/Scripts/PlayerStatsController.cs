@@ -100,7 +100,7 @@ public class PlayerStatsController : MonoBehaviour {
 	}
 
 	public float Hunger () {
-		return thirst;
+		return hunger;
 	}
 	public void Hunger (float value) {
 		hunger = Mathf.Clamp(value, 0, maxHunger);

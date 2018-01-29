@@ -10,8 +10,8 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  - component: {fileID: 6500002}
   - component: {fileID: 114881910302044688}
+  - component: {fileID: 64607492472397556}
   m_Layer: 0
   m_Name: Rock1B
   m_TagString: resource
@@ -29,8 +29,8 @@ GameObject:
   - component: {fileID: 400002}
   - component: {fileID: 3300002}
   - component: {fileID: 2300002}
-  - component: {fileID: 6500004}
   - component: {fileID: 114766103945698968}
+  - component: {fileID: 64262112409900190}
   m_Layer: 0
   m_Name: Rock1B
   m_TagString: resource
@@ -48,8 +48,8 @@ GameObject:
   - component: {fileID: 400004}
   - component: {fileID: 3300004}
   - component: {fileID: 2300004}
-  - component: {fileID: 6500006}
   - component: {fileID: 114818633894774586}
+  - component: {fileID: 64708348724926400}
   m_Layer: 0
   m_Name: Rock1B
   m_TagString: resource
@@ -67,8 +67,8 @@ GameObject:
   - component: {fileID: 400006}
   - component: {fileID: 3300006}
   - component: {fileID: 2300006}
-  - component: {fileID: 6500000}
   - component: {fileID: 114142552583754800}
+  - component: {fileID: 64798889375863140}
   m_Layer: 0
   m_Name: Rock1C
   m_TagString: resource
@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 3300008}
   - component: {fileID: 2300008}
   - component: {fileID: 114329673805585486}
+  - component: {fileID: 64678092810978840}
   m_Layer: 0
   m_Name: Rock1E
   m_TagString: resource
@@ -397,54 +398,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_Mesh: {fileID: 4300000, guid: 1ef63c9e36fd9ae47867f4bb79c7cbb3, type: 3}
---- !u!65 &6500000
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.74, y: 0.96, z: 2.59}
-  m_Center: {x: -0.000004172325, y: -0.0000019073486, z: -0.00000017881393}
---- !u!65 &6500002
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.05, y: 1.4, z: 2.72}
-  m_Center: {x: 0.08517183, y: 0.064454466, z: -0.25906178}
---- !u!65 &6500004
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.79, y: 1.42, z: 3.11}
-  m_Center: {x: 0.08517949, y: 0.06445636, z: -0.25905046}
---- !u!65 &6500006
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.37, y: 1.41, z: 3.534731}
-  m_Center: {x: 0.08517946, y: 0.06445257, z: -0.25906557}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -456,6 +409,76 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100008}
   m_IsPrefabParent: 1
+--- !u!64 &64262112409900190
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 976e89866374b704f8eff32373bca69c, type: 3}
+--- !u!64 &64607492472397556
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 976e89866374b704f8eff32373bca69c, type: 3}
+--- !u!64 &64678092810978840
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 1ef63c9e36fd9ae47867f4bb79c7cbb3, type: 3}
+--- !u!64 &64708348724926400
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 976e89866374b704f8eff32373bca69c, type: 3}
+--- !u!64 &64798889375863140
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: d1edb567dd56f994cbb75a74e047b18a, type: 3}
 --- !u!114 &114142552583754800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -469,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   resource: {fileID: 1630953382529058, guid: 1ec560b2d9b173a488d06cde99b7cda2, type: 2}
-  dropCount: 1
+  dropCount: 3
 --- !u!114 &114329673805585486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   resource: {fileID: 1630953382529058, guid: 1ec560b2d9b173a488d06cde99b7cda2, type: 2}
-  dropCount: 1
+  dropCount: 5
 --- !u!114 &114818633894774586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -511,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   resource: {fileID: 1630953382529058, guid: 1ec560b2d9b173a488d06cde99b7cda2, type: 2}
-  dropCount: 1
+  dropCount: 5
 --- !u!114 &114881910302044688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -525,4 +548,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   resource: {fileID: 1630953382529058, guid: 1ec560b2d9b173a488d06cde99b7cda2, type: 2}
-  dropCount: 1
+  dropCount: 5

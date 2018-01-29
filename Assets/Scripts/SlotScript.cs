@@ -41,7 +41,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
             } else if (buildable) {
                 build();
             } else if (equipable) {
-
+                equip();
             }
         }
     }
@@ -61,14 +61,14 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
                     playerStats.Hunger(playerStats.Hunger() +  2);
                     playerStats.Health(playerStats.Health() + 10);
                     break;
-                case 13:
-                    playerStats.Thirst(playerStats.Thirst() + 10);
-                    playerStats.Hunger(playerStats.Hunger() +  2);
-                    playerStats.Health(playerStats.Health() +  2);
-                    break;
                 case 16:
                     playerStats.Thirst(playerStats.Thirst() +  2);
                     playerStats.Hunger(playerStats.Hunger() + 10);
+                    playerStats.Health(playerStats.Health() +  2);
+                    break;
+                case 17:
+                    playerStats.Thirst(playerStats.Thirst() + 10);
+                    playerStats.Hunger(playerStats.Hunger() +  2);
                     playerStats.Health(playerStats.Health() +  2);
                     break;
             }
@@ -96,7 +96,21 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
     }
 
     void equip () {
-        // TODO
+        if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
+        {
+            plecak.DodajPrzedmiot(PrzedmiotID, 1);
+            switch (PrzedmiotID) {
+                case 21:
+                    Player.GetComponent<PlayerController>().weaponType = 1;
+                    break;
+                case 22:
+                    Player.GetComponent<PlayerController>().weaponType = 2;
+                    break;
+                case 23:
+                    Player.GetComponent<PlayerController>().weaponType = 3;
+                    break;
+            }
+        }
     }
 
     // Use this for initialization
