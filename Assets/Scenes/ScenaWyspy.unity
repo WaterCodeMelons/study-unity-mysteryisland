@@ -326,10 +326,10 @@ RectTransform:
   m_Father: {fileID: 514401929}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.55501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2614732
 MonoBehaviour:
@@ -4366,9 +4366,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87767733
 MonoBehaviour:
@@ -4436,7 +4436,7 @@ MonoBehaviour:
   itemIdToCraft: 14
   slotid: 6
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &91609899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,10 +5516,10 @@ RectTransform:
   m_Father: {fileID: 1908504633}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.55501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115960408
 MonoBehaviour:
@@ -8446,10 +8446,10 @@ RectTransform:
   m_Father: {fileID: 1466246773}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.55501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &168165581
 MonoBehaviour:
@@ -11165,9 +11165,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &229451082
 MonoBehaviour:
@@ -11235,7 +11235,7 @@ MonoBehaviour:
   itemIdToCraft: 24
   slotid: 13
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &230155335
 GameObject:
   m_ObjectHideFlags: 0
@@ -11488,10 +11488,10 @@ RectTransform:
   m_Father: {fileID: 1908504633}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 253.29501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233080788
 MonoBehaviour:
@@ -11615,10 +11615,10 @@ RectTransform:
   m_Father: {fileID: 514401929}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325.665, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &238172653
 MonoBehaviour:
@@ -19711,10 +19711,10 @@ RectTransform:
   m_Father: {fileID: 1466246773}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 36.185, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383888129
 MonoBehaviour:
@@ -23858,9 +23858,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451796082
 MonoBehaviour:
@@ -23928,7 +23928,7 @@ MonoBehaviour:
   itemIdToCraft: 15
   slotid: 7
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1001 &452283745
 Prefab:
   m_ObjectHideFlags: 0
@@ -26512,9 +26512,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514315833
 MonoBehaviour:
@@ -26582,7 +26582,7 @@ MonoBehaviour:
   itemIdToCraft: 23
   slotid: 12
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &514401928
 GameObject:
   m_ObjectHideFlags: 0
@@ -26621,10 +26621,10 @@ RectTransform:
   m_Father: {fileID: 894621775}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.925, y: -177.1875}
-  m_SizeDelta: {x: 361.85, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514401930
 MonoBehaviour:
@@ -26715,10 +26715,10 @@ RectTransform:
   m_Father: {fileID: 514401929}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180.925, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &515225408
 MonoBehaviour:
@@ -27528,10 +27528,10 @@ RectTransform:
   m_Father: {fileID: 514401929}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 36.185, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533035334
 MonoBehaviour:
@@ -28164,9 +28164,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553326908
 MonoBehaviour:
@@ -28234,7 +28234,7 @@ MonoBehaviour:
   itemIdToCraft: 9
   slotid: 2
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &556708605 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4557725876396116, guid: 0a56b418df090b74b84f9f832481b976,
@@ -28854,10 +28854,10 @@ RectTransform:
   m_Father: {fileID: 1466246773}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180.925, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564999537
 MonoBehaviour:
@@ -31144,9 +31144,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604375237
 MonoBehaviour:
@@ -31214,7 +31214,7 @@ MonoBehaviour:
   itemIdToCraft: 21
   slotid: 10
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1001 &605451564
 Prefab:
   m_ObjectHideFlags: 0
@@ -39686,9 +39686,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796067051
 MonoBehaviour:
@@ -39756,7 +39756,7 @@ MonoBehaviour:
   itemIdToCraft: 12
   slotid: 5
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1001 &797103626
 Prefab:
   m_ObjectHideFlags: 0
@@ -39980,9 +39980,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800053364
 MonoBehaviour:
@@ -40050,7 +40050,7 @@ MonoBehaviour:
   itemIdToCraft: 8
   slotid: 1
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &801339804 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4557725876396116, guid: 0a56b418df090b74b84f9f832481b976,
@@ -42264,10 +42264,10 @@ RectTransform:
   m_Father: {fileID: 1908504633}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180.925, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852634131
 MonoBehaviour:
@@ -43801,7 +43801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &894621775
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43841,7 +43841,7 @@ MonoBehaviour:
   inv: {fileID: 15491439}
   IdToCraft: 0
   itemIdToCraft: 0
-  WymaganiaDoCraftu: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  WymaganiaDoCraftu: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &894621777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50923,10 +50923,10 @@ RectTransform:
   m_Father: {fileID: 1908504633}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325.665, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046203234
 MonoBehaviour:
@@ -62583,10 +62583,10 @@ RectTransform:
   m_Father: {fileID: 1466246773}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 325.665, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333424166
 MonoBehaviour:
@@ -62825,9 +62825,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336846918
 MonoBehaviour:
@@ -62895,7 +62895,7 @@ MonoBehaviour:
   itemIdToCraft: 17
   slotid: 8
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1337280823 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1f390249b63e55345ab073d1c7563680, type: 2}
@@ -68652,10 +68652,10 @@ RectTransform:
   m_Father: {fileID: 894621775}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.925, y: -39.0375}
-  m_SizeDelta: {x: 361.85, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466246774
 MonoBehaviour:
@@ -75718,9 +75718,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1611550631
 MonoBehaviour:
@@ -75788,7 +75788,7 @@ MonoBehaviour:
   itemIdToCraft: 10
   slotid: 3
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1613866626
 GameObject:
   m_ObjectHideFlags: 0
@@ -77343,9 +77343,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1636491923
 MonoBehaviour:
@@ -77413,7 +77413,7 @@ MonoBehaviour:
   itemIdToCraft: 11
   slotid: 4
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1001 &1638383497
 Prefab:
   m_ObjectHideFlags: 0
@@ -80935,10 +80935,10 @@ RectTransform:
   m_Father: {fileID: 1908504633}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 36.185, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711911202
 MonoBehaviour:
@@ -82669,10 +82669,10 @@ RectTransform:
   m_Father: {fileID: 894621775}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.925, y: -241.76248}
-  m_SizeDelta: {x: 361.85, y: 59.074997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741234662
 MonoBehaviour:
@@ -86261,10 +86261,10 @@ RectTransform:
   m_Father: {fileID: 1466246773}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 253.29501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826310522
 MonoBehaviour:
@@ -86506,9 +86506,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830973802
 MonoBehaviour:
@@ -86576,7 +86576,7 @@ MonoBehaviour:
   itemIdToCraft: 19
   slotid: 14
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1833541330
 GameObject:
   m_ObjectHideFlags: 0
@@ -86608,10 +86608,10 @@ RectTransform:
   m_Father: {fileID: 514401929}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 253.29501, y: -34.0375}
-  m_SizeDelta: {x: 72.37, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833541332
 MonoBehaviour:
@@ -88724,10 +88724,10 @@ RectTransform:
   m_Father: {fileID: 894621775}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190.925, y: -108.112495}
-  m_SizeDelta: {x: 361.85, y: 68.075}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908504634
 MonoBehaviour:
@@ -90051,7 +90051,7 @@ MonoBehaviour:
   interactionRange: 1.5
   combatOn: 1
   hasWeapon: 0
-  weaponType: 2
+  weaponType: 1
   attackCooldownInSec: 1
 --- !u!114 &1937143755
 MonoBehaviour:
@@ -90340,9 +90340,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1937809559
 MonoBehaviour:
@@ -90410,7 +90410,7 @@ MonoBehaviour:
   itemIdToCraft: 20
   slotid: 15
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1001 &1940022114
 Prefab:
   m_ObjectHideFlags: 0
@@ -96208,9 +96208,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2083035201
 MonoBehaviour:
@@ -96278,7 +96278,7 @@ MonoBehaviour:
   itemIdToCraft: 22
   slotid: 11
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &2083840861 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 56b2b73ec13b2bd4399db23d0a631243, type: 2}
@@ -97920,9 +97920,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -4.295006, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2121424760
 MonoBehaviour:
@@ -97990,7 +97990,7 @@ MonoBehaviour:
   itemIdToCraft: 18
   slotid: 9
   craft: {fileID: 894621776}
-  Wymagania: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Wymagania: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &2123659949
 GameObject:
   m_ObjectHideFlags: 0

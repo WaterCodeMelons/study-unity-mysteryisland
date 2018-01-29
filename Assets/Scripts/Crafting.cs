@@ -194,10 +194,9 @@ public class Crafting : MonoBehaviour {
 
     public void UsunZinventory(int id)
     {
-        for (int i = 1; i < WymaganiaDoCraftu.Length; i++)
+        for (int i = 0; i < WymaganiaDoCraftu.Length; i++)
         {
             inv.UsunPrzedmiot(i,WymaganiaDoCraftu[i],true);
-            
         }
         print(WymaganiaDoCraftu.Length);
     }

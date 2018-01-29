@@ -67,7 +67,6 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (gameObject.activeSelf == true)
         {
             UstawIkone(Slot1);
@@ -95,8 +94,6 @@ public class Inventory : MonoBehaviour
             UstawIkone(Slot23);
             UstawIkone(Slot24);
         }
-
-
     }
 
     /* 
