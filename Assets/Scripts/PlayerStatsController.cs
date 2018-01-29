@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 
 public class PlayerStatsController : MonoBehaviour {
 
@@ -28,6 +29,12 @@ public class PlayerStatsController : MonoBehaviour {
 	public GameObject thirstBar;
 	public GameObject hungerBar;
 	public GameObject healthBar;
+
+	[Header("Death")]
+	public Image deathScreen;
+	private float deathAnim = 0;
+
+	[Space]
 
 	// Aktualne wartości statystyk
 	[SerializeField]
@@ -76,13 +83,34 @@ public class PlayerStatsController : MonoBehaviour {
 			health -= Time.deltaTime * healthDecayPerSecond;
 			health = Mathf.Clamp(health, 0, maxHealth);
 		}
+
+		if (Health() <= 0)
+			death();
+
+		if(Input.GetKey(KeyCode.F12))
+			Health(0);
 	}
 
 	void updateStats () { // Skracanie pasków statystyk
 		staminaBar.transform.localScale = new Vector3(stamina/maxStamina, 1, 1);
 		thirstBar.transform.localScale = new Vector3(thirst/maxThirst, 1, 1);
 		hungerBar.transform.localScale = new Vector3(hunger/maxHunger, 1, 1);
-		healthBar.transform.localScale = new Vector3(health/maxHealth, 1, 1); 
+		healthBar.transform.localScale = new Vector3(health/maxHealth, 1, 1);
+	}
+
+	void death () {
+		GetComponent<CapsuleCollider>().enabled = true;
+		GetComponent<CharacterController>().enabled = false;
+		GetComponent<Rigidbody>().isKinematic = false;
+		GetComponent<FirstPersonController>().enabled = false;
+		GetComponent<Rigidbody>().AddForce(transform.forward * -0.1f, ForceMode.Impulse);
+		GetComponent<FirstPersonController>().m_IsWalking = true;
+		deathAnim += Time.deltaTime * 0.2f;
+		deathAnim = Mathf.Clamp01(deathAnim);
+		deathScreen.color = new Color(0, 0, 0, deathAnim);
+		PlayerPrefs.SetString("dayCount", TimeController.dayDisplay.ToString());
+		if (deathAnim == 1)
+			GameObject.FindObjectOfType<UIController>().LoadScene("DeathScreen");
 	}
 
 	public float Stamina () {

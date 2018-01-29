@@ -71,6 +71,16 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
                     playerStats.Hunger(playerStats.Hunger() +  2);
                     playerStats.Health(playerStats.Health() +  2);
                     break;
+                case 24:
+                    if (GameObject.Find("BoatTrigger").GetComponent<BoatController>().canBoat) {
+                        if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
+                        {
+                            GameObject.Find("Boat").GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find("Boat").GetComponent<MeshCollider>().enabled = true;
+                            GameObject.Find("Canvas/ResolutionControl/MessageSystem").GetComponent<MessageSystem>().showMessage("Tak!", "Czas się stąd wydostać!", 5);
+                        }
+                    }
+                    break;
             }
         }
     }

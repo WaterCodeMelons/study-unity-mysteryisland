@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenaWyspy.unity
     guid: 0a039efec3792e44dbf5286ac90778a4
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 74572eeeba9c6344b8bc0f3439f09d1f
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 59e06f385dc8d8a46b65e69e789f9ed8

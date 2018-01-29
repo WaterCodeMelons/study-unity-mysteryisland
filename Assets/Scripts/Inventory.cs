@@ -97,6 +97,7 @@ public class Inventory : MonoBehaviour
         DodajPrzedmiot(16, 1);
         DodajPrzedmiot(17, 1);
         DodajPrzedmiot(2, 1);
+        DodajPrzedmiot(24, 1);
     }
 
     /* 
