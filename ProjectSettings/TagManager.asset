@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inventory
+  - resource
+  - interactable
+  - Piranha
+  - CraftTipPanel
+  - Item
   layers:
   - Default
   - TransparentFX

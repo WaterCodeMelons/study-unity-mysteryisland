@@ -31,6 +31,7 @@ public class InputControllerScript : MonoBehaviour {
 			else {
 				kontroler.HidePanel("Canvas/ResolutionControl/Inventory");
 				kontroler.HidePanel("Canvas/ResolutionControl/Craft");
+				kontroler.HidePanel("Canvas/ResolutionControl/CraftTipPanel");
 			}
 		}
 	}
@@ -67,6 +68,7 @@ public class InputControllerScript : MonoBehaviour {
 		else {
 			kontroler.HidePanel("Canvas/ResolutionControl/Inventory");
 			kontroler.HidePanel("Canvas/ResolutionControl/Craft");
+			kontroler.HidePanel("Canvas/ResolutionControl/CraftTipPanel");
 		}
 	}
 	public void toggleMap () {
