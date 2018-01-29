@@ -19,10 +19,18 @@ public class PlayerController : MonoBehaviour {
 	public Camera playerCamera;
 	public Animator playerAnimator;
 	public Text raycastTooltip;
-	public AudioSource attackSound;
+	public GameObject axe;
+	public GameObject pickAxe;
+	public GameObject torch;
+
+	[Space]
+
+	[Header("Dependencies")]
+	public AudioSource hitSoundEffect;
 	public AudioClip punch;
 	public AudioClip chop;
-	public GameObject Axe;
+	public AudioClip pick;
+	public AudioClip burn;
 
 	[Space]
 
@@ -35,10 +43,10 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Combat data")]
 	public bool combatOn = true;
-	public bool hasAxe = false;
-	public float fistDamage = 10;
-	public float axeDamage = 100;
+	public bool hasWeapon = false;
+	public int weaponType = 0;
 	public float attackCooldownInSec = 1; // predefiniowany cooldown
+
 	private float cooldown = 0; // aktualny cooldown, który zmienia się po wykonaniu ataku
 
 	void Update () {
@@ -46,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 		animate();
 
 		if (Input.GetKeyDown(KeyCode.Alpha1))
-			hasAxe = !hasAxe;
+			hasWeapon = !hasWeapon;
     }
 
 
@@ -71,9 +79,6 @@ public class PlayerController : MonoBehaviour {
 				if (Input.GetKeyUp(KeyCode.F)) {
 					// Wykonujemy metodę interaction() w obiekcie trafionym raycastem
 					hit.transform.SendMessage("interaction");
-				} else {
-					// Lub możemy uderzyć ten przedmiot aby go przesunąć lub wykonać inną akcję, którą można określić na samym przedmiocie
-					struck(hit);
 				}
 			} else if (hit.transform.tag == "resource") {
 				struck(hit); // Uderzamy obiekt resource w celu zmniejszenia jego hp aby wydobyć z niego surowce
@@ -85,11 +90,36 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	// Mała metoda pozwalająca na lepszą organizację kodu między animacjami biegania, interakcji i uderzenia
+	// Mała metoda pozwalająca na lepszą organizację kodu między animacjami biegania, interakcji i uderzenia oraz zmiany broni
 	void animate () {
 		playerAnimator.SetBool("isRunning", !fpsController.m_IsWalking);
-		playerAnimator.SetBool("hasWeapon", hasAxe);
-		Axe.SetActive(hasAxe);
+		playerAnimator.SetBool("hasWeapon", hasWeapon);
+		switch (weaponType) {
+			case 0:
+				hasWeapon = false;
+				axe.SetActive(false);
+				pickAxe.SetActive(false);
+				torch.SetActive(false);
+				break;
+			case 1:
+				hasWeapon = true;
+				axe.SetActive(true);
+				pickAxe.SetActive(false);
+				torch.SetActive(false);
+				break;
+			case 2:
+				hasWeapon = true;
+				axe.SetActive(false);
+				pickAxe.SetActive(true);
+				torch.SetActive(false);
+				break;
+			case 3:
+				hasWeapon = true;
+				axe.SetActive(false);
+				pickAxe.SetActive(false);
+				torch.SetActive(true);
+				break;
+		}
 	}
 
 	/*
@@ -102,13 +132,12 @@ public class PlayerController : MonoBehaviour {
 	void struck (RaycastHit hit) {
 		if (combatOn) {
 			if (Input.GetKeyDown(KeyCode.Mouse0) && cooldown == 0) {
-				if (hasAxe) {
+				if (hasWeapon) {
 					playerAnimator.SetBool("swing" + Random.Range(1, 3), true);
-					StartCoroutine(Damage(hit, axeDamage, chop));
 				} else {
 					playerAnimator.SetBool("punch" + Random.Range(1, 3), true);
-					StartCoroutine(Damage(hit, fistDamage, punch));
 				}
+				StartCoroutine(Damage(hit, weaponType));
 				cooldown = 1;
 				StartCoroutine(stopAnim(cooldown));
 			} else {
@@ -128,13 +157,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// Wątek aplikujący obrażenia i siłę na rigidbody w odpowiednim czasie trwania animacji
-	IEnumerator Damage (RaycastHit hit, float damage, AudioClip sound) {
+	IEnumerator Damage (RaycastHit hit, int weaponType) {
 		yield return new WaitForSeconds(0.5f);
-		attackSound.clip = sound;
-		attackSound.Play();
-		hit.transform.SendMessage("damage", damage);
-		
+		hit.transform.SendMessage("damage", weaponType);
 		if (hit.transform.GetComponent<Rigidbody>())
-			hit.transform.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * 15, ForceMode.Impulse);
+			hit.transform.GetComponent<Rigidbody>();
 	}
 }

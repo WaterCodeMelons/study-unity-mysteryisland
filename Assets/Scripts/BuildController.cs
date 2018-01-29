@@ -21,11 +21,6 @@ public class BuildController : MonoBehaviour {
 	
 	void Update () {
 
-		// TODO: Wybieranie obiektu do budowania z UI, jak na razie KeyCode.B wybiera obiekt 0 z bazy budynków
-		if (Input.GetKeyDown(KeyCode.B)) {
-			this.build(0);
-		}
-
 		// Początkowa pozycja raya, obrana w punkcie 5 jednostek przed kamerą, na środku viewportus
 		Vector3 rayStart = playerCamera.transform.position + (playerCamera.transform.forward * 5f);
 
@@ -67,14 +62,21 @@ public class BuildController : MonoBehaviour {
 					isBuilding = false;
 			}
 
+			// anulowanie budowania
+			if (Input.GetKeyDown(KeyCode.Mouse1)) {
+					Destroy(building);
+					building = null;
+					isBuilding = false;
+			}
+
 		}
 
     }
 
 	// Metoda pozwalająca na wybranie obiektu do budowania, ustawi się on w punkcie kolizji raycasta z terenem
 	// I będzie można go zatwierdzić za pomocą LMB
-	void build (int id) {
-		building = Instantiate(buildingsDatabase[0], hit.point, Quaternion.identity);
+	public void build (int id) {
+		building = Instantiate(buildingsDatabase[id], hit.point, Quaternion.identity);
 		isBuilding = true;
 	}
 }

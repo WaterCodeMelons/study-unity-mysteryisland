@@ -14,9 +14,14 @@ Dodawanie hp/ wyrzucanie przedmiotu/ów/
 public class SlotScript : MonoBehaviour, IPointerClickHandler
 {
     private Inventory plecak;
+    private BuildController builder;
+    private PlayerStatsController playerStats;
     public int PrzedmiotID;
     public GameObject ModelPrzedmiotu;
-    public bool Jadalne;
+    public bool droppable;
+    public bool edible;
+    public bool buildable;
+    public bool equipable;
     GameObject Player;
     /*
     <summary>
@@ -26,30 +31,79 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
     */
     public void OnPointerClick(PointerEventData eventData)
     {    
-        if (eventData.button == PointerEventData.InputButton.Right && Jadalne)
+        if (eventData.button == PointerEventData.InputButton.Right)
         {
-            if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
-            {
-                // dodajHP;
+
+            if (droppable) {
+                drop();
+            } else if (edible) {
+                eat();
+            } else if (buildable) {
+                build();
+            } else if (equipable) {
+
             }
         }
-        if(eventData.button == PointerEventData.InputButton.Left)
+    }
+
+    void drop () {
+        if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
         {
-            if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
-            {
-                Instantiate(ModelPrzedmiotu, Player.transform.position + (Player.transform.forward * 2), Player.transform.rotation);
-            }
-            
+            Instantiate(ModelPrzedmiotu, Player.transform.position + (Player.transform.forward * 2), Player.transform.rotation);
         }
+    }
+    void eat () {
+        if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
+        {
+            switch (PrzedmiotID) {
+                case 2:
+                    playerStats.Thirst(playerStats.Thirst() +  2);
+                    playerStats.Hunger(playerStats.Hunger() +  2);
+                    playerStats.Health(playerStats.Health() + 10);
+                    break;
+                case 13:
+                    playerStats.Thirst(playerStats.Thirst() + 10);
+                    playerStats.Hunger(playerStats.Hunger() +  2);
+                    playerStats.Health(playerStats.Health() +  2);
+                    break;
+                case 16:
+                    playerStats.Thirst(playerStats.Thirst() +  2);
+                    playerStats.Hunger(playerStats.Hunger() + 10);
+                    playerStats.Health(playerStats.Health() +  2);
+                    break;
+            }
+        }
+    }
+    void build () {
+        if(plecak.UsunPrzedmiot(PrzedmiotID, 1))
+        {
+            switch (PrzedmiotID) {
+                case 18:
+                    builder.build(0);
+                    break;
+                case 19:
+                    builder.build(1);
+                    break;
+                case 20:
+                    builder.build(2);
+                    break;
+                case 24:
+                    builder.build(3);
+                    break;
+            }
+            GameObject.Find("WorldController/InputController").GetComponent<InputControllerScript>().toggleInventory();
+        }
+    }
+
+    void equip () {
+        // TODO
     }
 
     // Use this for initialization
     void Start () {
         plecak = GameObject.Find("Inventory").GetComponent<Inventory>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
         Player = GameObject.Find("Player");
-    }
+        builder = GameObject.Find("WorldController/BuildController").GetComponent<BuildController>();
+        playerStats = Player.GetComponent<PlayerStatsController>();
+	}
 }

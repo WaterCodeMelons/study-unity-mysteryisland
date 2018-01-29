@@ -14,7 +14,7 @@ public class CraftSlot : MonoBehaviour, IPointerClickHandler
 
     public int slotid;
     public Crafting craft;
-    public int[] Wymagania = new int[10];
+    public int[] Wymagania = new int[24];
     public void OnPointerClick(PointerEventData eventData)
     {
         if(eventData.button == PointerEventData.InputButton.Left)

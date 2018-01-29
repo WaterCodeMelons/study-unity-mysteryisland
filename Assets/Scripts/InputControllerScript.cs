@@ -6,7 +6,6 @@ public class InputControllerScript : MonoBehaviour {
 
 	bool pokazInv;
 	bool pokazMap;
-
 	bool pokazMenu;
 
 
@@ -60,6 +59,34 @@ public class InputControllerScript : MonoBehaviour {
 		}
 	}
 
+	public void toggleInventory () {
+		pokazInv = !pokazInv;
+		if (pokazInv) {
+			kontroler.ShowPanel("Canvas/ResolutionControl/Inventory");
+		}
+		else {
+			kontroler.HidePanel("Canvas/ResolutionControl/Inventory");
+			kontroler.HidePanel("Canvas/ResolutionControl/Craft");
+		}
+	}
+	public void toggleMap () {
+		pokazMap = !pokazMap;
+		if (pokazMap) {
+			kontroler.ShowPanel("Canvas/ResolutionControl/MapMenu");
+		}
+		else {
+			kontroler.HidePanel("Canvas/ResolutionControl/MapMenu");
+		}
+	}
+	public void toggleMenu () {
+		pokazMenu = !pokazMenu;
+		if (pokazMenu) {
+			kontroler.ShowPanel("Canvas/ResolutionControl/Menu");
+		}
+		else {
+			kontroler.HidePanel("Canvas/ResolutionControl/Menu");
+		}
+	}
 
 
 

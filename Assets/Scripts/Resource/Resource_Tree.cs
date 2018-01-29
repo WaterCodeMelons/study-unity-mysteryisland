@@ -11,7 +11,7 @@ using UnityEngine;
 public class Resource_Tree : MonoBehaviour {
 
 	// HP drzewa, które PlayerController musi zbić aby zniszczyć drzewo
-	public float health = 100;
+	public float health = 300;
 	// Przedmiotm który ma wypadać z drzewa
 	public GameObject resource;
 	// Ilość wypadanego przedmiotu
@@ -40,7 +40,27 @@ public class Resource_Tree : MonoBehaviour {
     }
 
 	// Metoda interakcji dla PlayerController [hit.sendMessage("damage", damage)] wiecie o co chodzi
-	void damage (int damage) {
-		health -= damage;
+	void damage (int weaponType) {
+		PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+		AudioSource audio = player.hitSoundEffect;
+		switch (weaponType) {
+			case 0:
+				audio.clip = player.punch;
+				health -= 10;
+				break;
+			case 1:
+				audio.clip = player.chop;
+				health -= 100;
+				break;
+			case 2:
+				audio.clip = player.chop;
+				health -= 10;
+				break;
+			case 3:
+				audio.clip = player.burn;
+				health -= 10;
+				break;
+		}
+		audio.Play();
 	}
 }

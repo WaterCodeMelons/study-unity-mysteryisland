@@ -10,7 +10,7 @@ public class Crafting : MonoBehaviour {
     public Inventory inv;
     public int IdToCraft;
     public int itemIdToCraft;
-    public int[] WymaganiaDoCraftu = new int[10]; 
+    public int[] WymaganiaDoCraftu = new int[24];
     GameObject CraftSlot1;
     GameObject CraftSlot2;
     GameObject CraftSlot3;
@@ -21,6 +21,11 @@ public class Crafting : MonoBehaviour {
     GameObject CraftSlot8;
     GameObject CraftSlot9;
     GameObject CraftSlot10;
+    GameObject CraftSlot11;
+    GameObject CraftSlot12;
+    GameObject CraftSlot13;
+    GameObject CraftSlot14;
+    GameObject CraftSlot15;
 
     // Use this for initialization
     void Start () {
@@ -35,6 +40,11 @@ public class Crafting : MonoBehaviour {
         CraftSlot8 = GameObject.Find("CraftSlot8");
         CraftSlot9 = GameObject.Find("CraftSlot9");
         CraftSlot10 = GameObject.Find("CraftSlot10");
+        CraftSlot11 = GameObject.Find("CraftSlot11");
+        CraftSlot12 = GameObject.Find("CraftSlot12");
+        CraftSlot13 = GameObject.Find("CraftSlot13");
+        CraftSlot14 = GameObject.Find("CraftSlot14");
+        CraftSlot15 = GameObject.Find("CraftSlot15");
 
     }
 	
@@ -86,11 +96,30 @@ public class Crafting : MonoBehaviour {
 
             case 9:
                 ikona = CraftSlot9.GetComponentInChildren<Image>();
-
                 break;
 
             case 10:
                 ikona = CraftSlot10.GetComponentInChildren<Image>();
+                break;
+
+            case 11:
+                ikona = CraftSlot11.GetComponentInChildren<Image>();
+                break;
+
+            case 12:
+                ikona = CraftSlot12.GetComponentInChildren<Image>();
+                break;
+
+            case 13:
+                ikona = CraftSlot13.GetComponentInChildren<Image>();
+                break;
+
+            case 14:
+                ikona = CraftSlot14.GetComponentInChildren<Image>();
+                break;
+
+            case 15:
+                ikona = CraftSlot15.GetComponentInChildren<Image>();
                 break;
 
         }
@@ -110,6 +139,11 @@ public class Crafting : MonoBehaviour {
         Image obraz8 = WybierzZdjecieSlota(8);
         Image obraz9 = WybierzZdjecieSlota(9);
         Image obraz10 = WybierzZdjecieSlota(10);
+        Image obraz11 = WybierzZdjecieSlota(11);
+        Image obraz12 = WybierzZdjecieSlota(12);
+        Image obraz13 = WybierzZdjecieSlota(13);
+        Image obraz14 = WybierzZdjecieSlota(14);
+        Image obraz15 = WybierzZdjecieSlota(15);
         Color c = Color.white;
         c.a = 0.4f;
         obraz1.color = c;
@@ -122,6 +156,11 @@ public class Crafting : MonoBehaviour {
         obraz8.color = c;
         obraz9.color = c;
         obraz10.color = c;
+        obraz11.color = c;
+        obraz12.color = c;
+        obraz13.color = c;
+        obraz14.color = c;
+        obraz15.color = c;
         c = Color.black;
         c.a = 1f;
         obraz.color = c;
@@ -221,11 +260,30 @@ public class Crafting : MonoBehaviour {
 
             case 9:
                 ilosc = CraftSlot9.GetComponentInChildren<Text>();
-
                 break;
 
             case 10:
                 ilosc = CraftSlot10.GetComponentInChildren<Text>();
+                break;
+
+            case 11:
+                ilosc = CraftSlot11.GetComponentInChildren<Text>();
+                break;
+
+            case 12:
+                ilosc = CraftSlot12.GetComponentInChildren<Text>();
+                break;
+
+            case 13:
+                ilosc = CraftSlot13.GetComponentInChildren<Text>();
+                break;
+
+            case 14:
+                ilosc = CraftSlot14.GetComponentInChildren<Text>();
+                break;
+
+            case 15:
+                ilosc = CraftSlot15.GetComponentInChildren<Text>();
                 break;
 
         }

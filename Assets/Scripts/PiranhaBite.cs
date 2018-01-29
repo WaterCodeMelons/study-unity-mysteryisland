@@ -11,11 +11,9 @@ public class PiranhaBite : MonoBehaviour {
     void OnControllerColliderHit(ControllerColliderHit col)
     {
 
-        playerHealth = GameObject.Find("Player").GetComponent<PlayerStatsController>().health;
         if (col.gameObject.tag == "Piranha")
         {
-            playerHealth = playerHealth - PiranhaBiteHealthDecay;
-            GameObject.Find("Player").GetComponent<PlayerStatsController>().health = playerHealth;
+            GameObject.Find("Player").GetComponent<PlayerStatsController>().Health(GameObject.Find("Player").GetComponent<PlayerStatsController>().Health() - PiranhaBiteHealthDecay);
         }
     }
 }

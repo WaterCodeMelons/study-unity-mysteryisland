@@ -28,6 +28,10 @@ public class Inventory : MonoBehaviour
     GameObject Slot18;
     GameObject Slot19;
     GameObject Slot20;
+    GameObject Slot21;
+    GameObject Slot22;
+    GameObject Slot23;
+    GameObject Slot24;
 
 
     // Use this for initialization
@@ -53,7 +57,10 @@ public class Inventory : MonoBehaviour
         Slot18 = GameObject.Find("Slot18");
         Slot19 = GameObject.Find("Slot19");
         Slot20 = GameObject.Find("Slot20");
-        DodajPrzedmiot(1, 10);
+        Slot21 = GameObject.Find("Slot21");
+        Slot22 = GameObject.Find("Slot22");
+        Slot23 = GameObject.Find("Slot23");
+        Slot24 = GameObject.Find("Slot24");
         gameObject.SetActive(false);
     }
 
@@ -83,6 +90,10 @@ public class Inventory : MonoBehaviour
             UstawIkone(Slot18);
             UstawIkone(Slot19);
             UstawIkone(Slot20);
+            UstawIkone(Slot21);
+            UstawIkone(Slot22);
+            UstawIkone(Slot23);
+            UstawIkone(Slot24);
         }
 
 
@@ -226,7 +237,6 @@ public class Inventory : MonoBehaviour
         Text ilosc = Slot1.GetComponentInChildren<Text>();
         switch (id)
         {
-
             case 1:
                 ilosc = Slot1.GetComponentInChildren<Text>();
                 break;
@@ -261,7 +271,6 @@ public class Inventory : MonoBehaviour
 
             case 9:
                 ilosc = Slot9.GetComponentInChildren<Text>();
-
                 break;
 
             case 10:
@@ -302,11 +311,26 @@ public class Inventory : MonoBehaviour
 
             case 19:
                 ilosc = Slot19.GetComponentInChildren<Text>();
-
                 break;
 
             case 20:
                 ilosc = Slot20.GetComponentInChildren<Text>();
+                break;
+
+            case 21:
+                ilosc = Slot21.GetComponentInChildren<Text>();
+                break;
+
+            case 22:
+                ilosc = Slot22.GetComponentInChildren<Text>();
+                break;
+
+            case 23:
+                ilosc = Slot23.GetComponentInChildren<Text>();
+                break;
+
+            case 24:
+                ilosc = Slot24.GetComponentInChildren<Text>();
                 break;
 
         }
@@ -315,7 +339,6 @@ public class Inventory : MonoBehaviour
 
     public int iloscPrzedmiotow(int id)
     {
-
         Text text = PrzypiszSlot(id);
         int wynik = int.Parse(text.text);
         return wynik;

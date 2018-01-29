@@ -30,10 +30,14 @@ public class PlayerStatsController : MonoBehaviour {
 	public GameObject healthBar;
 
 	// Aktualne wartości statystyk
+	[SerializeField]
 	private float stamina;
+	[SerializeField]
 	private float thirst;
+	[SerializeField]
 	private float hunger;
-	public float health;
+	[SerializeField]
+	private float health;
 
 	private FirstPersonController fpsController;
 
@@ -79,5 +83,33 @@ public class PlayerStatsController : MonoBehaviour {
 		thirstBar.transform.localScale = new Vector3(thirst/maxThirst, 1, 1);
 		hungerBar.transform.localScale = new Vector3(hunger/maxHunger, 1, 1);
 		healthBar.transform.localScale = new Vector3(health/maxHealth, 1, 1); 
+	}
+
+	public float Stamina () {
+		return fpsController.stamina;
+	}
+	public void Stamina (float value) {
+		fpsController.stamina = Mathf.Clamp(value, 0, maxStamina);
+	}
+
+	public float Thirst () {
+		return thirst;
+	}
+	public void Thirst (float value) {
+		thirst = Mathf.Clamp(value, 0, maxThirst);
+	}
+
+	public float Hunger () {
+		return thirst;
+	}
+	public void Hunger (float value) {
+		hunger = Mathf.Clamp(value, 0, maxHunger);
+	}
+
+	public float Health () {
+		return health;
+	}
+	public void Health (float value) {
+		health = Mathf.Clamp(value, 0, maxHealth);
 	}
 }
