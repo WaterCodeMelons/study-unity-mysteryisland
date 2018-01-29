@@ -182,6 +182,7 @@ public class Inventory : MonoBehaviour
 
     public bool UsunPrzedmiot(int id, int amount, bool craft)
     {
+        id++;
         Text ilosc = PrzypiszSlot(id);
         int PoprzedniaWartosc;
         int NowaWartosc;
@@ -190,11 +191,13 @@ public class Inventory : MonoBehaviour
         {
             NowaWartosc = PoprzedniaWartosc - amount;
             ilosc.text = NowaWartosc.ToString();
+            print("tru");
             return true;
         }
         else
         {
             return false;
+            print("fals");
         }
     }
     /* 
