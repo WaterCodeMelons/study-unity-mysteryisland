@@ -10,6 +10,7 @@ TagManager:
   - Piranha
   - CraftTipPanel
   - Item
+  - EndWorldTrigger
   layers:
   - Default
   - TransparentFX
