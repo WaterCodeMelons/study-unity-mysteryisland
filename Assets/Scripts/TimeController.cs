@@ -28,6 +28,19 @@ public class TimeController : MonoBehaviour {
 	private float currentTimeOfDay;
 	private float sunInitialIntenisty;
 
+
+    // Kolor mgły gdy gracz znajduje się pod wodą
+    UnderwaterEffect underwater;
+    private float defaultFogDensity;
+
+
+
+    void Awake()
+    {
+        defaultFogDensity = RenderSettings.fogDensity;
+    }
+
+
 	void Start () {
 		// Podczas startu gry skrypt przyjmuje intensywność oświetlenia z światła kierunkowego
 		sunInitialIntenisty = environmentalLight.intensity;
@@ -84,7 +97,19 @@ public class TimeController : MonoBehaviour {
 		// Noc - kolor czarny rgba(0, 0, 0, 1)
 		// Podczas wschodu kolor zmienia się z czarnego rgba(0, 0, 0, 1) na szary rgba(128, 128, 128, 255)
 		// Podczas zachodu kolor zmienia się z szarego rgba(128, 128, 128, 255) na czarny rgba(0, 0, 0, 255)
-		RenderSettings.fogColor = new Color(0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 1f);
+
+        if (GameObject.Find("Player").GetComponent<UnderwaterEffect>().isUnderwater == true)
+        {
+            RenderSettings.fogColor = new Color(0.212f*intensityMultiplier, 0.373f*intensityMultiplier, 0.396f*intensityMultiplier, 1f);
+            RenderSettings.fogDensity = 0.15f;
+        }
+        if (GameObject.Find("Player").GetComponent<UnderwaterEffect>().isUnderwater == false)
+        {
+            RenderSettings.fogColor = new Color(0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 1f);
+            RenderSettings.fogDensity = defaultFogDensity;
+        }
+
+            
 
 		// Zmienia ekspozycję skyboxa i blokuje ją pomiędzy [0.25 - 0.8]
 		skybox.SetFloat("_Exposure", Mathf.Clamp(0.8f * intensityMultiplier, 0.04f, 0.8f));
