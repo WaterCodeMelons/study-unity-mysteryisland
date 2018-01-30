@@ -9,15 +9,22 @@ public class UnderwaterEffect : MonoBehaviour {
     public Transform Player;
     public float waterLevel;
     public bool isUnderwater;
-    public AudioSource underwaterAmbience;
     FirstPersonController fpsController;
+    private bool clipIsPlaying = true;
 
-
-	void Update ()
+    void Update ()
     {
         if (Player.position.y < waterLevel)
         {
             isUnderwater = true;
+            if (clipIsPlaying==true)
+            {
+                GameObject.Find("Player").GetComponent<AudioSource>().mute = true;
+                GameObject.Find("UnderwaterEffectController").GetComponent<AudioSource>().Play();
+                GameObject.Find("Player").GetComponent<FirstPersonController>().m_WalkSpeed = 3f;
+                GameObject.Find("Player").GetComponent<FirstPersonController>().m_RunSpeed = 3f;
+                clipIsPlaying = false;
+            }
  
 
         }
@@ -25,10 +32,14 @@ public class UnderwaterEffect : MonoBehaviour {
         {
           
             isUnderwater = false;
+            GameObject.Find("UnderwaterEffectController").GetComponent<AudioSource>().Stop();
+            GameObject.Find("Player").GetComponent<AudioSource>().mute = false;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_WalkSpeed = 5f;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_RunSpeed = 10f;
+            clipIsPlaying = true;
 
         }
     }
-
 
 
 

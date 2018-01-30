@@ -98,12 +98,12 @@ public class TimeController : MonoBehaviour {
 		// Podczas wschodu kolor zmienia się z czarnego rgba(0, 0, 0, 1) na szary rgba(128, 128, 128, 255)
 		// Podczas zachodu kolor zmienia się z szarego rgba(128, 128, 128, 255) na czarny rgba(0, 0, 0, 255)
 
-        if (GameObject.Find("Player").GetComponent<UnderwaterEffect>().isUnderwater == true)
+        if (GameObject.Find("UnderwaterEffectController").GetComponent<UnderwaterEffect>().isUnderwater == true)
         {
             RenderSettings.fogColor = new Color(0.212f*intensityMultiplier, 0.373f*intensityMultiplier, 0.396f*intensityMultiplier, 1f);
             RenderSettings.fogDensity = 0.15f;
         }
-        if (GameObject.Find("Player").GetComponent<UnderwaterEffect>().isUnderwater == false)
+        if (GameObject.Find("UnderwaterEffectController").GetComponent<UnderwaterEffect>().isUnderwater == false)
         {
             RenderSettings.fogColor = new Color(0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 0.35f*intensityMultiplier, 1f);
             RenderSettings.fogDensity = defaultFogDensity;

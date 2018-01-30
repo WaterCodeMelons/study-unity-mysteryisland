@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.25
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 342139993}
-  m_IndirectSpecularColor: {r: 0.33603895, g: 0.2937659, b: 0.25507206, a: 0.25}
+  m_IndirectSpecularColor: {r: 0.18516913, g: 0.1618534, b: 0.20666021, a: 0.25}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -24938,6 +24938,130 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fcf5a6a213e4348439961020fcebc7ff, type: 2}
   m_PrefabInternal: {fileID: 633732978}
+--- !u!1 &575063854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 575063855}
+  - component: {fileID: 575063857}
+  - component: {fileID: 575063856}
+  m_Layer: 0
+  m_Name: UnderwaterEffectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575063855
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575063854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1215999035}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575063856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575063854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6402d87c18a424688b5e1b898dd8f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 686830798}
+  waterLevel: 77.2
+  isUnderwater: 0
+--- !u!82 &575063857
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575063854}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1531e8ee2db44d94aa0c76a70d81ccec, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.667
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &575386384 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fcf5a6a213e4348439961020fcebc7ff, type: 2}
@@ -29454,10 +29578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9860c78dcf7ac034e9c6432d90d3a643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 686830798}
-  waterLevel: 77.2
-  isUnderwater: 0
-  underwaterAmbience: {fileID: 686830787}
 --- !u!114 &686830789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30441,7 +30561,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707004746}
-  m_LocalRotation: {x: 0.03283158, y: 0.09703936, z: -0.0032028214, w: 0.99473375}
+  m_LocalRotation: {x: 0.03283173, y: 0.097039424, z: -0.003202839, w: 0.99473375}
   m_LocalPosition: {x: 501.1815, y: 86.49415, z: 417.05667}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children:
@@ -39162,8 +39282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 920278586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 388.44452, y: 72.57, z: 408.386}
+  m_LocalRotation: {x: -0.03283173, y: 0.09703943, z: 0.003202839, w: 0.99473375}
+  m_LocalPosition: {x: 492.31195, y: 71.38848, z: 405.6326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51366,6 +51486,7 @@ Transform:
   m_Children:
   - {fileID: 1322310033}
   - {fileID: 128345433}
+  - {fileID: 575063855}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76574,7 +76695,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1848082552}
-  m_LocalRotation: {x: 0.03283158, y: 0.09703936, z: -0.0032028214, w: 0.99473375}
+  m_LocalRotation: {x: 0.03283173, y: 0.097039424, z: -0.003202839, w: 0.99473375}
   m_LocalPosition: {x: 492.31195, y: 84.75152, z: 405.6326}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children: []
