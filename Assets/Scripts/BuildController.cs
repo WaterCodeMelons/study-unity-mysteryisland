@@ -29,6 +29,10 @@ public class BuildController : MonoBehaviour {
 
 		if (isBuilding) {
 
+			if (building.transform.tag == "shelter") {
+				rayStart = playerCamera.transform.position + (playerCamera.transform.forward * 15f);
+			}
+
 			// Kolizja z terenem
 			if (Physics.Raycast(rayStart, Vector3.down, out hit, 100))
 			{
@@ -58,6 +62,7 @@ public class BuildController : MonoBehaviour {
 
 			// "puszczenie" obiektu, pozostawienie go w miejscu zderzenia
 			if (Input.GetButtonDown("Fire1")) {
+					GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 50);
 					building = null;
 					isBuilding = false;
 			}

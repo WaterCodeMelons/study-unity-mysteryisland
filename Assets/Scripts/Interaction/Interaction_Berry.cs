@@ -30,6 +30,7 @@ public class Interaction_Berry : MonoBehaviour {
 	// Metoda dostępna z poziomu klasy PlayerController do interakcji
 	public void interaction () {
 		if (time == 0 && inv.DodajPrzedmiot(2, 1)) {
+			GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 20);
 			time = 8 * 60;
 		}
 	}

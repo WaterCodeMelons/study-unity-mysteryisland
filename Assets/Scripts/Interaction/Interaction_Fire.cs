@@ -34,7 +34,10 @@ public class Interaction_Fire : MonoBehaviour {
 
 	// Metoda dostępna z poziomu klasy PlayerController do interakcji
 	public void interaction () {
-		time += 5;
+		if (GameObject.Find("Canvas/ResolutionControl/Inventory").GetComponent<Inventory>().UsunPrzedmiot(1, 1)) {
+			GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 5);
+			time += 5;
+		}
 	}
 
 }

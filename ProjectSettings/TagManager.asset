@@ -11,6 +11,7 @@ TagManager:
   - CraftTipPanel
   - Item
   - EndWorldTrigger
+  - shelter
   layers:
   - Default
   - TransparentFX

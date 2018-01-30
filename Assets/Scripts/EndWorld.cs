@@ -13,6 +13,7 @@ public class EndWorld : MonoBehaviour {
     {
         if (col.gameObject.tag=="EndWorldTrigger")
         {
+            GameObject.Find("Canvas/ResolutionControl/MessageSystem").GetComponent<MessageSystem>().showMessage("Uważaj!", "Oddalając się od lądu narażasz się na niebezpieczeństwo!", 5);
             GameObject.Find("Player").GetComponent<PlayerStatsController>().Health(GameObject.Find("Player").GetComponent<PlayerStatsController>().Health() - EndWorldEnterHealthDecay);
         }
     }

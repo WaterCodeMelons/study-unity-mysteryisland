@@ -41,6 +41,7 @@ public class Resource_Tree : MonoBehaviour {
 
 	// Metoda interakcji dla PlayerController [hit.sendMessage("damage", damage)] wiecie o co chodzi
 	void damage (int weaponType) {
+		GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 20);
 		PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
 		AudioSource audio = player.hitSoundEffect;
 		switch (weaponType) {

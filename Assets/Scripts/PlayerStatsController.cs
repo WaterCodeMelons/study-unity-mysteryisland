@@ -46,11 +46,12 @@ public class PlayerStatsController : MonoBehaviour {
 	[SerializeField]
 	private float health;
 
-	private FirstPersonController fpsController;
+	[Space]
+
+	public FirstPersonController fpsController;
 
 
 	void Start () { // Przypisuje statystykom maksymalne wartości, podane powyżej
-		fpsController = GetComponent<FirstPersonController>();
 
 		thirst = maxThirst;
 		hunger = maxHunger;
@@ -114,7 +115,7 @@ public class PlayerStatsController : MonoBehaviour {
 	}
 
 	public float Stamina () {
-		return fpsController.stamina;
+		return stamina;
 	}
 	public void Stamina (float value) {
 		fpsController.stamina = Mathf.Clamp(value, 0, maxStamina);

@@ -25,6 +25,7 @@ public class Interaction_Pickup : MonoBehaviour {
 	}
 
 	void Start () {
+		GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 10);
 		inv = GameObject.Find("Canvas/ResolutionControl/Inventory").GetComponent<Inventory>();
 	}
 }

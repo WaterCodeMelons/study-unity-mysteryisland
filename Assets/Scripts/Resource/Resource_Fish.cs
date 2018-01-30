@@ -24,6 +24,7 @@ public class Resource_Fish : MonoBehaviour
 		}
 		audio.Play();
         inv.DodajPrzedmiot(16, 1);
+		GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 20);
         Destroy(gameObject);
 	}
 
