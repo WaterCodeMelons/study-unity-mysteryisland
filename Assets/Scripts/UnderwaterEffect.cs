@@ -17,12 +17,16 @@ public class UnderwaterEffect : MonoBehaviour {
         if (Player.position.y < waterLevel)
         {
             isUnderwater = true;
+            Physics.gravity = new Vector3(0, -9.81f/4, 0);
             if (clipIsPlaying==true)
             {
                 GameObject.Find("Player").GetComponent<AudioSource>().mute = true;
                 GameObject.Find("UnderwaterEffectController").GetComponent<AudioSource>().Play();
                 GameObject.Find("Player").GetComponent<FirstPersonController>().m_WalkSpeed = 3f;
                 GameObject.Find("Player").GetComponent<FirstPersonController>().m_RunSpeed = 3f;
+                GameObject.Find("Player").GetComponent<FirstPersonController>().m_JumpSpeed = 2f;
+                GameObject.Find("Player").GetComponent<FirstPersonController>().m_StickToGroundForce = 0.1f;
+                GameObject.Find("Player").GetComponent<FirstPersonController>().m_GravityMultiplier = 0.1f;
                 clipIsPlaying = false;
             }
  
@@ -32,10 +36,14 @@ public class UnderwaterEffect : MonoBehaviour {
         {
           
             isUnderwater = false;
+            Physics.gravity = new Vector3(0, -9.81f, 0);
             GameObject.Find("UnderwaterEffectController").GetComponent<AudioSource>().Stop();
             GameObject.Find("Player").GetComponent<AudioSource>().mute = false;
             GameObject.Find("Player").GetComponent<FirstPersonController>().m_WalkSpeed = 5f;
             GameObject.Find("Player").GetComponent<FirstPersonController>().m_RunSpeed = 10f;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_JumpSpeed = 10f;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_StickToGroundForce = 10f;
+            GameObject.Find("Player").GetComponent<FirstPersonController>().m_GravityMultiplier = 2f;
             clipIsPlaying = true;
 
         }

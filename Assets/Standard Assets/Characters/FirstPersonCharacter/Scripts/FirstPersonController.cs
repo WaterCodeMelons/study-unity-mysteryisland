@@ -14,9 +14,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] public float m_WalkSpeed;
         [SerializeField] public float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-        [SerializeField] private float m_JumpSpeed;
-        [SerializeField] private float m_StickToGroundForce;
-        [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] public float m_JumpSpeed;
+        [SerializeField] public float m_StickToGroundForce;
+        [SerializeField] public float m_GravityMultiplier;
         [SerializeField] public MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
