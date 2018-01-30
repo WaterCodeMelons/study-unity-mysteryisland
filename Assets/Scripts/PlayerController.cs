@@ -52,9 +52,6 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		castRay();
 		animate();
-
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-			hasWeapon = !hasWeapon;
     }
 
 
@@ -131,7 +128,7 @@ public class PlayerController : MonoBehaviour {
 	*/
 	void struck (RaycastHit hit) {
 		if (combatOn) {
-			if (Input.GetKeyDown(KeyCode.Mouse0) && cooldown == 0) {
+			if (Input.GetKey(KeyCode.Mouse0) && cooldown == 0) {
 				if (hasWeapon) {
 					playerAnimator.SetBool("swing" + Random.Range(1, 3), true);
 				} else {
