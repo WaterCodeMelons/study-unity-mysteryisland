@@ -20,12 +20,12 @@ public class Interaction_Pickup : MonoBehaviour {
 	// Interakcja z PlayerController TODO
 	public void interaction () {
 		if (inv.DodajPrzedmiot(id, count)) {
+			GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 10);
 			Destroy(gameObject);
 		}
 	}
 
 	void Start () {
-		GameObject.FindObjectOfType<PlayerStatsController>().Stamina(GameObject.FindObjectOfType<PlayerStatsController>().Stamina() - 10);
 		inv = GameObject.Find("Canvas/ResolutionControl/Inventory").GetComponent<Inventory>();
 	}
 }
