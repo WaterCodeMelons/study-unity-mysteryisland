@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class GrowingTree : MonoBehaviour {
 
-    public float GrowingSpeed;
-    public float MaxScale;
-    
+    public float daysToFullGrowth;
+    private float scale;
+    private bool growing = false;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
+    void Start () {
+        scale = transform.localScale.x;
+    }
 	
-	// Update is called once per frame
 	void Update () {
-        if (transform.localScale.x < MaxScale)
-        {
-            transform.localScale += Vector3.one * Time.deltaTime * GrowingSpeed;
+        if (growing) {
+            scale += Time.deltaTime / (TimeController.minutesInAFullDayDisplay * 60) / daysToFullGrowth;
+            scale = Mathf.Clamp01(scale);
+            transform.localScale = new Vector3(scale, scale, scale);
         }
 
+        if (Input.GetKey(KeyCode.Mouse0))
+            growing = true;
+
+        if (scale == 1)
+            transform.tag = "resource";
+        
     }
 }

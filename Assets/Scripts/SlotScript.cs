@@ -79,6 +79,8 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
                             GameObject.Find("Boat").GetComponent<MeshCollider>().enabled = true;
                             GameObject.Find("Canvas/ResolutionControl/MessageSystem").GetComponent<MessageSystem>().showMessage("Tak!", "Czas się stąd wydostać!", 5);
                         }
+                    } else {
+                        GameObject.Find("Canvas/ResolutionControl/MessageSystem").GetComponent<MessageSystem>().showMessage("Hmm...", "Muszę poszukać odpowiedniego miejsca na wybudowanie tej łodzi.", 5);
                     }
                     break;
             }
@@ -96,9 +98,6 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler
                     break;
                 case 20:
                     builder.build(2);
-                    break;
-                case 24:
-                    builder.build(3);
                     break;
             }
             GameObject.Find("WorldController/InputController").GetComponent<InputControllerScript>().toggleInventory();

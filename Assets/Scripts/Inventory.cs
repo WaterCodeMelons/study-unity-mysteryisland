@@ -94,10 +94,12 @@ public class Inventory : MonoBehaviour
             UstawIkone(Slot23);
             UstawIkone(Slot24);
         }
-        DodajPrzedmiot(16, 1);
-        DodajPrzedmiot(17, 1);
-        DodajPrzedmiot(2, 1);
-        DodajPrzedmiot(24, 1);
+        
+        if (Input.GetKey(KeyCode.F11)) {
+            for (int i = 1; i <= 24; i++) {
+                DodajPrzedmiot(i, 1);
+            }
+        }
     }
 
     /* 
